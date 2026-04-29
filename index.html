@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberNova - Hacking Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat">
+                <span class="label">Money:</span>
+                <span class="value" id="moneyDisplay">$1,000</span>
+            </div>
+            <div class="stat">
+                <span class="label">Level:</span>
+                <span class="value" id="levelDisplay">1</span>
+            </div>
+            <div class="stat">
+                <span class="label">Hacking:</span>
+                <span class="value" id="hackingDisplay">1</span>
+            </div>
+            <div class="stat">
+                <span class="label">Rep:</span>
+                <span class="value" id="repDisplay">0</span>
+            </div>
+            <div class="stat">
+                <span class="label">Time:</span>
+                <span class="value" id="timeDisplay">00:00:00</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Sidebar Navigation -->
+            <div class="sidebar">
+                <div class="nav-title">CyberNova</div>
+                <button class="nav-btn active" data-section="terminal">Terminal</button>
+                <button class="nav-btn" data-section="servers">Servers</button>
+                <button class="nav-btn" data-section="programs">Programs</button>
+                <button class="nav-btn" data-section="upgrades">Upgrades</button>
+                <button class="nav-btn" data-section="factions">Factions</button>
+                <button class="nav-btn" data-section="stats">Stats</button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Terminal Section -->
+                <div class="section active" id="terminal-section">
+                    <div class="terminal-window">
+                        <div class="terminal-header">Terminal</div>
+                        <div class="terminal-output" id="terminalOutput">
+                            <div class="output-line">
+                                <span class="time-stamp">[00:00:00]</span> Welcome to CyberNova v1.0
+                            </div>
+                            <div class="output-line">
+                                <span class="time-stamp">[00:00:00]</span> Type 'help' for available commands
+                            </div>
+                        </div>
+                        <div class="terminal-input-wrapper">
+                            <span class="prompt">▶ </span>
+                            <input type="text" id="terminalInput" class="terminal-input" placeholder="Enter command..." autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servers Section -->
+                <div class="section" id="servers-section">
+                    <div class="section-header">Available Servers</div>
+                    <div class="servers-grid" id="serversGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Programs Section -->
+                <div class="section" id="programs-section">
+                    <div class="section-header">Hacking Programs</div>
+                    <div class="programs-grid" id="programsGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Upgrades Section -->
+                <div class="section" id="upgrades-section">
+                    <div class="section-header">System Upgrades</div>
+                    <div class="upgrades-grid" id="upgradesGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Factions Section -->
+                <div class="section" id="factions-section">
+                    <div class="section-header">Hacker Factions</div>
+                    <div class="factions-grid" id="factionsGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="section" id="stats-section">
+                    <div class="section-header">Player Statistics</div>
+                    <div class="stats-display" id="statsDisplay">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
